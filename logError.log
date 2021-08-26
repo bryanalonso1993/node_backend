@@ -1,1 +1,2 @@
 Thu Aug 26 2021 12:40:10 GMT-0500 (Peru Standard Time)|backend_node|error|Error Connect Database SequelizeConnectionError: (conn=25, no: 1049, SQLState: 42000) Unknown database 'ansible'
+Thu Aug 26 2021 18:41:28 GMT-0500 (Peru Standard Time)|backend_node|error|Error Authentication TokenExpiredError: jwt expired

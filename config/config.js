@@ -4,6 +4,7 @@ process.env.PORT = process.env.PORT || 5000;
 // Token API
 process.env.USERAPI = "backendnode";
 process.env.PASSAPI = "b@ck3ndN0d3";
+process.env.SEED = "secret$33DP4ssw0rD";
 
 // Access Database
 process.env.DB = 'ansible';

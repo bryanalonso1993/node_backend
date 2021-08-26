@@ -3,7 +3,7 @@
  * https://github.com/winstonjs/winston
  */
 
-const { createLogger, format, transport, transports } = require('winston');
+const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, printf } = format;
 
 const timezoned = () => new Date();
@@ -19,8 +19,8 @@ const logFormat = printf( ({ timestamp, level, label, message }) => {
 
 const logger = createLogger({
     format: combine(
-        label({ label: 'backend_node'}),
-        timestamp({format: timezoned}),
+        label({ label: 'backend_node' }),
+        timestamp({ format: timezoned }),
         logFormat
     ),
     transports: consoleTransport,

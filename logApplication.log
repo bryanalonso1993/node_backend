@@ -1,1 +1,12 @@
 Thu Aug 26 2021 12:40:10 GMT-0500 (Peru Standard Time)|backend_node|error|Error Connect Database SequelizeConnectionError: (conn=25, no: 1049, SQLState: 42000) Unknown database 'ansible'
+Thu Aug 26 2021 16:15:41 GMT-0500 (Peru Standard Time)|backend_node|info|Success Authentication ORM sequelize
+Thu Aug 26 2021 16:15:41 GMT-0500 (Peru Standard Time)|backend_node|info|Success Sync ORM Sequelize
+Thu Aug 26 2021 16:30:11 GMT-0500 (Peru Standard Time)|backend_node|info|Success Authentication ORM sequelize
+Thu Aug 26 2021 16:30:11 GMT-0500 (Peru Standard Time)|backend_node|info|Success Sync ORM Sequelize
+Thu Aug 26 2021 16:40:43 GMT-0500 (Peru Standard Time)|backend_node|info|Success Authentication ORM sequelize
+Thu Aug 26 2021 16:40:43 GMT-0500 (Peru Standard Time)|backend_node|info|Success Sync ORM Sequelize
+Thu Aug 26 2021 18:34:14 GMT-0500 (Peru Standard Time)|backend_node|info|Success Authentication ORM sequelize
+Thu Aug 26 2021 18:34:14 GMT-0500 (Peru Standard Time)|backend_node|info|Success Sync ORM Sequelize
+Thu Aug 26 2021 18:41:25 GMT-0500 (Peru Standard Time)|backend_node|info|Success Authentication ORM sequelize
+Thu Aug 26 2021 18:41:25 GMT-0500 (Peru Standard Time)|backend_node|info|Success Sync ORM Sequelize
+Thu Aug 26 2021 18:41:28 GMT-0500 (Peru Standard Time)|backend_node|error|Error Authentication TokenExpiredError: jwt expired
