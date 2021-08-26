@@ -3,6 +3,7 @@
  */
 require('../config/config');
 const { Sequelize } = require('sequelize');
+const logger = require('../config/logger');
 
 const sequelize = new Sequelize(process.env.DB, process.env.USERDB, process.env.PASSDB, {
     host: process.env.HOSTDB,
@@ -13,10 +14,10 @@ const sequelize = new Sequelize(process.env.DB, process.env.USERDB, process.env.
 
 sequelize.authenticate()
         .then( () => {
-            console.log('Success Authentication ORM Sequelize');
+            logger.log({ level: 'info', message: 'Success Authentication ORM sequelize'});
         })
         .catch( e => {
-            throw new Error(`Error Connect Database ${e}`);
+            logger.log({ level: 'error', message: `Error Connect Database ${e}`})
         });
 
 module.exports = sequelize;

@@ -9,11 +9,11 @@ const { combine, timestamp, label, printf } = format;
 const timezoned = () => new Date();
 const consoleTransport = [
     new transports.Console(),
-    new transports.File({ filename: 'logError.log', level: 'error'}),
-    new transports.File({ filename: 'logApplication.log', level: 'info'})
+    new transports.File({ filename: 'logError.log', level: 'error' }),
+    new transports.File({ filename: 'logApplication.log' })
 ]
 
-const logFormat = printf( (timestamp, level, label, message) => {
+const logFormat = printf( ({ timestamp, level, label, message }) => {
     return `${timestamp}|${label}|${level}|${message}`
 });
 
