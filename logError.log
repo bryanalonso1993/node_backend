@@ -1,2 +1,6 @@
 Thu Aug 26 2021 12:40:10 GMT-0500 (Peru Standard Time)|backend_node|error|Error Connect Database SequelizeConnectionError: (conn=25, no: 1049, SQLState: 42000) Unknown database 'ansible'
 Thu Aug 26 2021 18:41:28 GMT-0500 (Peru Standard Time)|backend_node|error|Error Authentication TokenExpiredError: jwt expired
+Fri Aug 27 2021 09:38:54 GMT-0500 (Peru Standard Time)|backend_node|error|"username" is required
+Fri Aug 27 2021 09:41:11 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaUser "username" is required
+Fri Aug 27 2021 10:05:16 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaUser "username" is required
+Fri Aug 27 2021 10:11:55 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaUser "username" length must be less than or equal to 10 characters long

@@ -1,5 +1,5 @@
-const inventory = require('./inventory');
+const devices = require('./devices');
 
 module.exports = {
-    inventory
+    devices
 }

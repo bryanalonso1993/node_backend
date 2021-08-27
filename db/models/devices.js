@@ -1,7 +1,7 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const { DataTypes } = require('sequelize');
 const con = require('../connection');
 
-const inventory = con.define('inventory', {
+const devices = con.define('devices', {
     deviceName: {
         type: DataTypes.STRING(50),
         allowNull: false,
@@ -18,4 +18,4 @@ const inventory = con.define('inventory', {
     freezeTableName: true
 });
 
-module.exports = inventory;
+module.exports = devices;

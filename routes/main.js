@@ -8,16 +8,25 @@ const { authentication } = require('../controllers');
 /**
  * Middlewares
  */
-const { validateToken } = require('../middlewares');
+const { validateToken, validateSchemaToken } = require('../middlewares');
 
 
 module.exports = function () {
-    router.get('/authentication', authentication)
-    router.get('/insertdevices', validateToken, (req=request, res=response) => {
+    /**
+     * Metodos POST
+     */
+    router.post('/authentication', authentication)
+    router.post('/insertdevices', validateSchemaToken ,validateToken, (req=request, res=response) => {
         res.send('Insertando dispositivos');
     })
-    router.get('/', (req=request, res=response) => {
+    /**
+     * Metodos GET
+     */
+    router.get('/', validateSchemaToken, validateToken, (req=request, res=response) => {
         res.send('Vengo de la Ruta');
+    })
+    router.get('/getdevicesansible', validateSchemaToken, validateToken, (req=request, res=response) => {
+        res.send('ROOT');
     })
     return router;
 }
