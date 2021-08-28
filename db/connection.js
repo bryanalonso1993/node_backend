@@ -10,6 +10,10 @@ const sequelize = new Sequelize(process.env.DB, process.env.USERDB, process.env.
     dialect: process.env.ENGINEDB,
     port: process.env.PORTDB,
     timezone: 'America/Lima',
+    define:{
+        charset: 'utf8',
+        collate: 'utf8_general_ci'
+    }
 });
 
 sequelize.authenticate()
