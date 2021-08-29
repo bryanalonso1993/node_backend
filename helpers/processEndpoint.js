@@ -10,7 +10,7 @@ const response = (endpoint, method) => {
             return axios.get(endpoint)
             break;
         case "post":
-            return axios.get(endpoint)
+            return axios.post(endpoint)
             break;
         default:
             return axios.get(endpoint)
