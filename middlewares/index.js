@@ -1,7 +1,7 @@
 const validateToken = require('./validateToken');
-const { validateSchemaToken }= require('./validateSchema');
+const validateSchema = require('./validateSchema');
 
 module.exports = {
-    validateToken: validateToken,
-    validateSchemaToken: validateSchemaToken
+    validateToken,
+    validateSchema
 }

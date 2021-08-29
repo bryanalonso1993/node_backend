@@ -4,11 +4,11 @@ const { request, response } = require('express');
 /**
  * Controllers
  */
-const { authentication, processDataCovid } = require('../controllers');
+const { authentication, processDataCovid, processDataDevicesAnsible } = require('../controllers');
 /**
  * Middlewares
  */
-const { validateToken, validateSchemaToken } = require('../middlewares');
+const { validateToken, validateSchema } = require('../middlewares');
 
 
 module.exports = function () {
@@ -16,18 +16,24 @@ module.exports = function () {
      * Metodos POST
      */
     router.post('/authentication', authentication);
-    router.post('/insertcases', validateSchemaToken, validateToken, processDataCovid.insertGeneralCasesApi);
-    router.post('/insertdevices', validateSchemaToken ,validateToken, (req=request, res=response) => {
-        res.send('Insertando dispositivos');
-    })
+    router.post('/insertcases', validateSchema.validateSchemaToken, validateToken, processDataCovid.insertGeneralCasesApi);
+    router.post('/insertdevice', validateSchema.validateSchemaToken, validateToken, processDataDevicesAnsible.insertDevice);
+    router.post('/insertdevices', validateSchema.validateSchemaToken, validateToken, validateSchema.validateSchemaObjectDevices, processDataDevicesAnsible.insertDevices);
+    /**
+     * Metodos DELETE
+     */
+
     /**
      * Metodos GET
      */
-    router.get('/', validateSchemaToken, validateToken, (req=request, res=response) => {
+    router.get('/', validateSchema.validateSchemaToken, validateToken, (req=request, res=response) => {
         res.send('Vengo de la Ruta');
     })
-    router.get('/getdevicesansible', validateSchemaToken, validateToken, (req=request, res=response) => {
-        res.send('ROOT');
+    router.get('/getdevices', validateSchema.validateSchemaToken, validateToken, (req=request, res=response) => {
+        res.send('getdevices');
+    })
+    router.get('/getdevice', validateSchema.validateSchemaToken, validateToken, (req=request, res=response) => {
+        res.send('getdevice')
     })
     return router;
 }
