@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 require('../config/config');
 
 module.exports = (req=request, res=response, next) => {
-    const { token } = req.body;
+    const { token } = req.headers;
     jwt.verify(token, process.env.SEED, function (err, decoded){
         if (err) {
             logger.log({ level: 'error', message: `Error Authentication ${err}`});

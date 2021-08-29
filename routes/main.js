@@ -4,7 +4,7 @@ const { request, response } = require('express');
 /**
  * Controllers
  */
-const { authentication } = require('../controllers');
+const { authentication, processDataCovid } = require('../controllers');
 /**
  * Middlewares
  */
@@ -15,7 +15,8 @@ module.exports = function () {
     /**
      * Metodos POST
      */
-    router.post('/authentication', authentication)
+    router.post('/authentication', authentication);
+    router.post('/insertcases', validateSchemaToken, validateToken, processDataCovid.insertGeneralCasesApi);
     router.post('/insertdevices', validateSchemaToken ,validateToken, (req=request, res=response) => {
         res.send('Insertando dispositivos');
     })

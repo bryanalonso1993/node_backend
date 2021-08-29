@@ -4,3 +4,7 @@ Fri Aug 27 2021 09:38:54 GMT-0500 (Peru Standard Time)|backend_node|error|"usern
 Fri Aug 27 2021 09:41:11 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaUser "username" is required
 Fri Aug 27 2021 10:05:16 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaUser "username" is required
 Fri Aug 27 2021 10:11:55 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaUser "username" length must be less than or equal to 10 characters long
+Sat Aug 28 2021 10:27:38 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaToken "token" is required
+Sat Aug 28 2021 10:27:57 GMT-0500 (Peru Standard Time)|backend_node|error|Error validate SchemaToken "token" is required
+Sat Aug 28 2021 10:28:04 GMT-0500 (Peru Standard Time)|backend_node|error|Error Authentication JsonWebTokenError: jwt must be provided
+Sat Aug 28 2021 14:31:19 GMT-0500 (Peru Standard Time)|backend_node|error|Error Authentication TokenExpiredError: jwt expired

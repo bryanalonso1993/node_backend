@@ -3,7 +3,7 @@ const logger = require('../config/logger');
 const { request, response } = require('express');
 
 exports.validateSchemaToken = (req=request, res=response, next) => {
-    const { token } = req.params;
+    const { token } = req.headers;
     const schema = Joi.object({
         token: Joi.string().required()
     })
